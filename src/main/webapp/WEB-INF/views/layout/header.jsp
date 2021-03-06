@@ -45,7 +45,7 @@
         <div id="open-nav" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
             <ul class="nav navbar-nav navbar-right text-center list-inline">
                 <li><a href="${path}/excellentStudent">首页</a></li>
-                <li><a href="${path}/profession">职业</a></li>
+                <li><a href="${path}/u/profession">职业</a></li>
                 <li><a href="">推荐</a></li>
                 <li><a href="">关于</a></li>
             </ul>

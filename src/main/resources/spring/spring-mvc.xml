@@ -36,16 +36,18 @@
         <property name="viewClass" value="org.springframework.web.servlet.view.tiles3.TilesView"/>
     </bean>
 
-<!--    &lt;!&ndash; 配置拦截器 &ndash;&gt;-->
-<!--    <mvc:interceptors>-->
-<!--        <mvc:interceptor>-->
-<!--            <mvc:mapping path="/u/**"/>-->
-<!--            <mvc:exclude-mapping path="/css/**"/>-->
-<!--            <mvc:exclude-mapping path="/js/**"/>-->
-<!--            <mvc:exclude-mapping path="/image/**"/>-->
-<!--            <bean class="com.kbk.util."/>-->
-<!--        </mvc:interceptor>-->
-<!--    </mvc:interceptors>-->
+    <!-- 配置拦截器 -->
+    <mvc:interceptors>
+        <!-- 多个拦截器，按顺序执行 -->
+        <mvc:interceptor>
+            <!--<mvc:mapping path="/**"/> &lt;!&ndash; 拦截所有的url包括子url路径 &ndash;&gt;-->
+            <mvc:mapping path="/u/**"/><!-- 拦截所有的url包括子url路径 -->
+            <mvc:exclude-mapping path="/css/**"/>
+            <mvc:exclude-mapping path="/js/**"/>
+            <mvc:exclude-mapping path="/images/**"/>
+            <bean class="com.kbk.util.InterceptUtil"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
 
     <!--multipartResolver文件上传解析器-->
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
@@ -83,16 +85,6 @@
     <!--开启 AspectJ 支持-->
     <aop:aspectj-autoproxy proxy-target-class="true"/>
 
-<!--    &lt;!&ndash; 配置拦截器 &ndash;&gt;-->
-<!--    <mvc:interceptors>-->
-<!--        &lt;!&ndash; 多个拦截器，按顺序执行 &ndash;&gt;-->
-<!--        <mvc:interceptor>-->
-<!--            &lt;!&ndash;<mvc:mapping path="/**"/> &lt;!&ndash; 拦截所有的url包括子url路径 &ndash;&gt;&ndash;&gt;-->
-<!--            <mvc:mapping path="/student/u/**"/> &lt;!&ndash; 拦截所有的url包括子url路径 &ndash;&gt;-->
-<!--            <bean class="com.kbk.interceptor.LoginInterceptor"/>-->
-<!--        </mvc:interceptor>-->
-<!--        &lt;!&ndash; 其他拦截器 &ndash;&gt;-->
-<!--    </mvc:interceptors>-->
 
 
 

@@ -73,14 +73,21 @@
 
         <!-- tableName:指定了表名;domainObjectName:指定了实体类的名称 -->
         <!-- 生成对应表及类名 -->
-        <table tableName="excellent_student" domainObjectName="ExcellentStudent"
-               enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
-               enableSelectByExample="false">
-        </table>
+<!--        <table tableName="excellent_student" domainObjectName="ExcellentStudent"-->
+<!--               enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"-->
+<!--               enableSelectByExample="false">-->
+<!--        </table>-->
+
+<!--        &lt;!&ndash; tableName:指定了表名;domainObjectName:指定了实体类的名称 &ndash;&gt;-->
+<!--        &lt;!&ndash; 生成对应表及类名 &ndash;&gt;-->
+<!--        <table tableName="profession" domainObjectName="Profession"-->
+<!--               enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"-->
+<!--               enableSelectByExample="false">-->
+<!--        </table>-->
 
         <!-- tableName:指定了表名;domainObjectName:指定了实体类的名称 -->
         <!-- 生成对应表及类名 -->
-        <table tableName="profession" domainObjectName="Profession"
+        <table tableName="user" domainObjectName="User"
                enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
                enableSelectByExample="false">
         </table>
